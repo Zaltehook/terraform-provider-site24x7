@@ -32,6 +32,9 @@ type Config struct {
 	// if it expires.
 	RefreshToken string
 
+  // Pass this to the http requst from here? 
+  ZaaidParameter string
+
 	// APIBaseURL allows overriding the default API base URL (https://www.site24x7.com/api).
 	// See https://www.site24x7.com/help/api/index.html#introduction for options of data centers for top level domain.
 	APIBaseURL string
