@@ -39,6 +39,12 @@ func NewRequest(client HTTPClient, verb, baseURL string) *Request {
 
 	r.AddHeader("Accept", "application/json; version=2.1")
 	r.AddHeader("User-Agent", "Site24x7TerraformProvider/1.0.0")
+
+	if zaaidParameter != "" {
+		zaaidHeader += "zaaid=" + zaaidParameter
+		r.AddHeader("Cookie", zaaidHeader)
+	}
+
 	return r
 }
 
